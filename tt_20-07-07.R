@@ -91,15 +91,15 @@ df_bar_plot <- df_mod %>%
             mean_cup_points = mean(total_cup_points))
 
 
-# Plots ----
+# Plot total coffee ----
 
 df_bar_plot %>% 
   ggplot(aes(reorder(country_of_origin, sum_total_weight, sum), sum_total_weight, fill = country_of_origin)) +
   geom_col() +
   coord_flip() + 
   theme_classic() +
-  ggtitle('Total weight of coffe per country wasted for rating purposes') +
-  ylab('Total weight of rated coffe in kg (log scale)') +
+  ggtitle('Total weight of coffee per country wasted for rating purposes') +
+  ylab('Total weight of rated coffee in kg (log scale)') +
   labs(caption = 'Data source: Coffee Quality Database \n Twitter: @marcuskleverman') +
   theme(plot.background = element_rect(fill = '#0a0a0a'),
         panel.background = element_blank(),
@@ -116,3 +116,4 @@ df_bar_plot %>%
 # Save plot
 ggsave('total_coffe.png', dpi = 400)
 
+# New plot -----
