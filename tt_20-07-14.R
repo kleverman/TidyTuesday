@@ -36,8 +36,8 @@ my_animation <- astronauts %>%
          size = guide_legend(override.aes = list(colour = '#c95136'))) +
   labs(size = 'Hours per \nmission', colour = 'Gender') +
   xlab('Year of mission') +
-  ylab('Maximum age of astronaut on mission') +
-  labs(title = 'Oldest astronaut per mission and\nthe length of mission (in hours)\n',
+  ylab('Age of astronaut') +
+  labs(title = 'Age of astronaut on mission and\nthe length of mission (in hours)\n',
        caption = 'Source: https://data.mendeley.com/datasets/86tsnnbv2w/1 | TidyTuesday | by @marcuskleverman') +
   theme(plot.background = element_rect(fill = '#0a0a0a'),
         panel.background = element_blank(),
